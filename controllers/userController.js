@@ -44,5 +44,9 @@ module.exports = {
       .then((user) => res.status(200).json(user))
       .catch((err) => res.status(500).json(err));
   },
-  removeFriend(req, res) {},
+  removeFriend(req, res) {
+    User.findOneAndUpdate({ _id: req.params.userId }, { $pull: { friends: { friendsId: req.params.friendsId } } })
+      .then((user) => res.status(200).json(user))
+      .catch((err) => res.status(500).json(err));
+  },
 };
