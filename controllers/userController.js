@@ -40,12 +40,12 @@ module.exports = {
   },
   // Add friend
   addFriend(req, res) {
-    User.findOneAndUpdate({ _id: req.params.userId }, { $push: { friends: req.body } })
+    User.findOneAndUpdate({ _id: req.params.userId }, { $addToSet: { friends: req.params.friendId } }, { new: true })
       .then((user) => res.status(200).json(user))
       .catch((err) => res.status(500).json(err));
   },
   removeFriend(req, res) {
-    User.findOneAndUpdate({ _id: req.params.userId }, { $pull: { friends: { friendsId: req.params.friendsId } } })
+    User.findOneAndUpdate({ _id: req.params.userId }, { $pull: { friends: req.params.friendId } }, { new: true })
       .then((user) => res.status(200).json(user))
       .catch((err) => res.status(500).json(err));
   },

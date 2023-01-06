@@ -45,15 +45,14 @@ module.exports = {
   },
   // Add reaction
   addReaction(req, res) {
-    Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $push: { reactions: req.body } })
+    Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $addToSet: { reactions: req.body } }, { new: true })
       .then((thought) => res.status(200).json(thought))
       .catch((err) => res.status(500).json(err));
   },
   // Remove reaction
   removeReaction(req, res) {
-    Thought.findOneAndUpdate({ _id: req.params.thoughtId }),
-      { $pull: { reactions: { reactionId: req.params.reactionId } } }
-        .then((thought) => res.status(200).json(thought))
-        .catch((err) => res.status(500).json(err));
+    Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $pull: { reactions: req.params.reactionId } }, { new: true })
+      .then((thought) => res.status(200).json(thought))
+      .catch((err) => res.status(500).json(err));
   },
 };
