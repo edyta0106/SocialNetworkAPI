@@ -4,6 +4,15 @@
 
 Build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
+## Table of Contents
+
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Walkthrough Video](#walkthrough-video)
+- [Questions](#questions)
+
 ## User Story
 
 ```md
@@ -33,11 +42,11 @@ To install, use the command line to install the Express.js. The application will
 - MongoDB database
 - Mongoose ODM
 
-## Mock Up
+## Walkthrough Video
 
-The following video link shows examples of the application's API routes being tested in Insomnia:
+The following video link shows the application's API routes being tested in Insomnia:
 
-[Social Network API Video Link]()
+[Social Network API Video Link](https://drive.google.com/file/d/1BTKyqBVNJ1dg_F_ojtcpeL5suWfInu1L/view)
 
 ## Questions
 
