@@ -1,6 +1,6 @@
 # Social Network API
 
-## Task
+## Description
 
 Build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
@@ -23,10 +23,24 @@ SO THAT my website can handle large amounts of unstructured data
 - WHEN I test API POST and DELETE routes in Insomnia
 - THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
+## Installation
+
+To install, use the command line to install the Express.js. The application will be invoked using `npm start`.
+
+## Usage
+
+- Express.js for routing
+- MongoDB database
+- Mongoose ODM
+
 ## Mock Up
 
 The following video link shows examples of the application's API routes being tested in Insomnia:
 
 [Social Network API Video Link]()
+
+## Questions
+
+Feel free to email me with any questions at edyta0106@gmail.com
 
 Enjoy and thank you for watching!
